@@ -102,8 +102,7 @@
       </div>
 
       <div class="entry">
-        <div class="entry-visual"><video src="SnapchatFaceLensesVideo.mp4" autoplay loop muted playsinline></video></div>
-        <p class="entry-credit">Lenses: <a href="https://www.snapchat.com/lens/be972436a59747d3b4c5998f6a5438cb?type=SNAPCODE&metadata=01&mt=8" target="_blank" rel="noopener">1</a> · <a href="https://www.snapchat.com/lens/8e8ec1a9899842dc802b79e0346b1a87?type=SNAPCODE&metadata=01" target="_blank" rel="noopener">2</a> · <a href="https://www.snapchat.com/lens/62557f0eab924a7599a6fe6b2d5b8308?type=SNAPCODE&metadata=01" target="_blank" rel="noopener">3</a> · © Snap Inc.</p>
+        <div class="entry-visual"><span class="placeholder-label">Face AR pipeline</span></div>
         <div class="entry-title">Snapchat 1st party face AR pipeline</div>
         <p class="entry-desc">Ran the end-to-end production pipeline for Snapchat's 1st party face AR experiences — from stats-driven concept selection through 3D/VFX review, engineering handoff, QA, and ship.</p>
       </div>
@@ -157,40 +156,41 @@
 
 
 <script>
-  // ── Scroll position preservation ──
-  // Save scroll position whenever the user clicks a "View case study" link.
-  // On load, restore if we have one saved AND we arrived here via back navigation.
-  
   const SCROLL_KEY = 'dk_timeline_scroll';
+
+  // Tell browser we manage scroll restoration ourselves — must be set early
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
 
   // Save scroll before navigating away to a case study
   document.querySelectorAll('.btn-case-study').forEach(link => {
     link.addEventListener('click', () => {
       try {
         sessionStorage.setItem(SCROLL_KEY, String(window.scrollY));
-      } catch (err) {
-        // sessionStorage not available — fall through
-      }
+      } catch (err) {}
     });
   });
 
-  // On load, restore scroll position if we have one saved
-  window.addEventListener('load', () => {
+  // Restore scroll — try immediately, then again after a short delay for mobile
+  function restoreScroll() {
     try {
       const saved = sessionStorage.getItem(SCROLL_KEY);
       if (saved !== null) {
-        // Use instant scroll to avoid visible jump
-        window.scrollTo({ top: parseInt(saved, 10), behavior: 'instant' });
         sessionStorage.removeItem(SCROLL_KEY);
+        const top = parseInt(saved, 10);
+        window.scrollTo(0, top);
+        // Second attempt for mobile browsers that reset scroll after DOMContentLoaded
+        setTimeout(() => window.scrollTo(0, top), 50);
+        setTimeout(() => window.scrollTo(0, top), 150);
       }
-    } catch (err) {
-      // sessionStorage not available — ignore
-    }
-  });
+    } catch (err) {}
+  }
 
-  // Tell browser we manage scroll restoration ourselves
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', restoreScroll);
+  } else {
+    restoreScroll();
   }
 </script>
 </body>
