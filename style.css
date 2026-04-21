@@ -226,19 +226,6 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   margin-bottom: 18px;
 }
 
-.entry-credit {
-  font-size: 11px;
-  color: var(--lighter-gray);
-  margin-top: -12px;
-  margin-bottom: 16px;
-}
-
-.entry-credit a {
-  color: var(--lighter-gray);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
 /* ── CASE STUDY LINK BUTTON (secondary) ── */
 .btn-case-study {
   display: inline-flex;
@@ -471,10 +458,10 @@ footer a:hover { opacity: 0.65; }
   nav.top-nav { padding: 18px 20px; }
   .wrapper, .wrapper-narrow { padding: 0 20px; }
   .role-meta .employer { font-size: 28px; }
-  .hero { padding-top: 90px; }
+  .hero { padding-top: 110px; }
   .hero h1 { font-size: 38px; }
   .hero .lead { font-size: 18px; }
-  .case-study-page { padding-top: 90px; }
+  .case-study-page { padding-top: 110px; }
   .cs-title-block h1 { font-size: 32px; }
   .cs-section p { font-size: 14px; }
   .footer-copy { margin-left: 0; width: 100%; }
