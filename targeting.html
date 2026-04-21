@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spatial Targeting on Spectacles · Dmytro Kucher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <a class="nav-back" href="index.html" onclick="return goBack(event)"><span class="arrow">←</span> Back</a>
+  </div>
+  <div class="nav-right">
+    <a href="mailto:kucherdim@gmail.com">Email</a>
+    <span class="nav-sep">·</span>
+    <a href="https://www.linkedin.com/in/dmitry-kucher-b4b960a4/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</nav>
+
+<section class="case-study-page">
+  <div class="wrapper">
+
+    <div class="cs-title-block">
+      <h1>Spatial Targeting on Spectacles</h1>
+      <p class="cs-subtitle">Redesigning how users point, aim, and interact in AR space</p>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">The problem</div>
+      <p>In the initial cursor implementation on Spectacles, hand-based targeting used a small 2D cursor rendered at a fixed depth — approximately 110cm from the user. When the user's ray intersected a UI panel at a different distance, the cursor jumped abruptly to that depth. The jump was jarring, but more importantly it was confusing: users had no visual model for how raycasting worked. There was no ray — just a floating cursor that snapped unpredictably. Every depth jump felt like a malfunction. Users couldn't build a reliable mental model for how to target, or whether they were doing it right.</p>
+      <p>UX research confirmed what was observable in sessions: targeting was breaking core interactions across Spectacles.</p>
+      <div class="cs-visual"><span class="placeholder-label">Original cursor behavior — fixed depth, abrupt jumps</span></div>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">The brief I set for myself</div>
+      <p>Make targeting feel like a natural extension of intent — not a visible mechanism users have to think about. The system should communicate just enough to guide action, and disappear once the user knows what to do.</p>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">The solutions</div>
+
+      <h3>The cursor</h3>
+      <p>The new cursor only appears when the user is near something interactable — fading in smoothly at the depth of that object. When not targeting anything, it disappears entirely.</p>
+      <p>To make this work, every interactive object needed a second physics collider — approximately 2x the size of the object — used exclusively to trigger cursor visibility as the user's hand approached. This was a foundational change to the Spectacles Interaction Kit: a new requirement that all interactable objects carry this proximity collider.</p>
+      <div class="cs-visual"><span class="placeholder-label">New cursor — proximity-aware fade-in</span></div>
+
+      <h3>The ray</h3>
+      <p>A visible ray gives users something the cursor never could: a clear line of sight that explains how the system works. Users can see where the ray originates, where it points, and what it lands on. The ray length adjusts dynamically based on what's being targeted. Different objects can express different targeting visuals — a cursor for UI panels, a ray for objects in 3D space — letting the system communicate context without adding UI.</p>
+      <p>In the balloon prototype, users transitioned naturally between cursor and ray within the same scene. In testing, they didn't notice the switch. That invisibility was the signal that the design was working.</p>
+      <div class="cs-visual"><span class="placeholder-label">Ray behavior — dynamic length at varying depths</span></div>
+
+      <h3>Depth constraint</h3>
+      <p>UI panels needed a way to lock cursor depth to their surface — preventing the ray from overshooting past the panel into the scene behind it. The design concept I introduced for this became the Interaction Plane in the shipped Interaction Kit: an invisible depth surface built into interactable objects that constrains cursor behavior to the UI plane, keeping targeting precise and predictable regardless of what exists in 3D space behind the panel.</p>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">Validation</div>
+      <p>I built two functional prototypes — one with the original cursor behavior, one with the new system — and wrapped both in the same balloon-popping task to create a controlled comparison. The prototypes went through corridor studies with the UX research team.</p>
+      <p>The new targeting system produced 3x more successful hits than the original.</p>
+      <p>Beyond the numbers: participants stopped thinking about targeting. They focused on the task. I presented the findings and the prototype comparison directly to Evan Spiegel and received his sign-off to proceed.</p>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">Shipped</div>
+      <p>The cursor and ray system shipped as part of the Spectacles Interaction Kit in Lens Studio, publicly available to all creators. The depth constraint concept became the Interaction Plane component in the shipped kit.</p>
+    </div>
+
+    <div class="back-to-timeline">
+      <a class="back-link" href="index.html" onclick="return goBack(event)"><span class="arrow">←</span> Back</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrapper">
+    <div class="footer-inner">
+      <a href="mailto:kucherdim@gmail.com">Email</a>
+      <span class="footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/dmitry-kucher-b4b960a4/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <a href="dmytro-kucher-cv.pdf" download>Download CV</a>
+      <span class="footer-copy">© 2026</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // On click, try history.back() first (preserves browser-managed scroll).
+  // If no history (direct link / bookmark), navigate to index.html,
+  // and index.html will restore scroll from sessionStorage if available.
+  function goBack(e) {
+    const cameFromOwnSite = document.referrer && document.referrer.includes(window.location.host);
+    if (cameFromOwnSite && history.length > 1) {
+      e.preventDefault();
+      history.back();
+      return false;
+    }
+    return true;
+  }
+</script>
+</body>
+</html>

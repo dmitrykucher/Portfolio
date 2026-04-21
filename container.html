@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Container — Spectacles' Spatial UI Primitive · Dmytro Kucher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <a class="nav-back" href="index.html" onclick="return goBack(event)"><span class="arrow">←</span> Back</a>
+  </div>
+  <div class="nav-right">
+    <a href="mailto:kucherdim@gmail.com">Email</a>
+    <span class="nav-sep">·</span>
+    <a href="https://www.linkedin.com/in/dmitry-kucher-b4b960a4/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</nav>
+
+<section class="case-study-page">
+  <div class="wrapper">
+
+    <div class="cs-title-block">
+      <h1>Container — Spectacles' Spatial UI Primitive</h1>
+      <p class="cs-subtitle">Designing the foundational pattern for moveable UI in AR space</p>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">The problem</div>
+      <p>When I joined the Spectacles product design team, there was an existing approach to moveable UI that had several compounding problems. Targeting it was difficult and fatiguing — the interaction surface was too small for the precision hand tracking demanded at the time, and users struggled to reliably grab and move things in space. It also offered no room for system-level functions — closing, scaling, switching between world and body anchoring would all have to live somewhere else, solved separately. The experience felt fragile rather than intentional.</p>
+      <p>There was no spatial UI primitive. There was no pattern. Everything was being solved ad hoc.</p>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">The brief I set for myself</div>
+      <p>Design a spatial container that makes AR panels feel like first-class objects in space — easy to grab, easy to move, and extensible enough to carry the system functions that flat UI in AR would need over time.</p>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">The process</div>
+      <p>I started in Figma — not to produce deliverables, but to think visually. Sketching the frame, exploring what the affordances should communicate, working out where system functions would live. Once the concept was solid, I mapped the interactions: cursor states, the frame's visual feedback on hover, the feedback hierarchy between cursor and frame.</p>
+      <p>Then I wrote a scenario — a storyboard of interactions I needed the prototype to show. Three Containers in front of a user. Within that setup I choreographed interactions with all of them: hovering over frames, content, scale affordances, and system buttons to visualize feedback on both the cursor side (shape changes to communicate intent) and the frame side (a dynamic highlight showing exactly where the user is targeting).</p>
+      <p>I recorded myself acting all of this out, framed deliberately so I knew where the Containers would sit in the final composite. I tracked the footage and brought it into Blender and After Effects. Built the UI assets in 3D, animated the full interaction model, and comped everything together.</p>
+      <p>This was before agentic tools existed. Without coding skills, animation was the fastest way to validate a highly interactive spatial design — no Figma prototype could communicate what the interaction felt like in 3D space.</p>
+      <p>I presented the prototype to Evan Spiegel. He greenlit it for further development and real-time prototyping in Lens Studio.</p>
+      <div class="cs-visual"><span class="placeholder-label">Process timeline — Figma → Video → Tracking → Blender → After Effects</span></div>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">The design</div>
+      <h3>Affordance size</h3>
+      <p>The frame margins were deliberately generous — designed to be adjustable within a range, with the default tuned to balance grabbability against visual footprint. Grabbable from any side, top, or bottom. The large surface area made targeting forgiving, and as hand tracking improved over subsequent hardware generations, the defaults were refined accordingly.</p>
+      <h3>System function space</h3>
+      <p>The frame wasn't just a grab handle — it created real estate for the functions that spatial UI needed: close, world-to-body anchor switching, scaling. These could live on the frame itself, contextually, without cluttering the content inside.</p>
+      <h3>Configurability</h3>
+      <p>In Lens Studio, developers can adjust border size dynamically — for example, tying affordance size to distance from the camera, so panels feel more grabbable as they move further away. Developers can also choose whether the Container billboards to face the user at all times, or stays fixed in world space. The Container is a system, not a fixed component.</p>
+      <div class="cs-visual"><span class="placeholder-label">Interaction explainer — hover / move / scale states</span></div>
+    </div>
+
+    <div class="cs-section">
+      <div class="cs-label">Outcome</div>
+      <p>The Container was built internally first, refined through iterative testing, and shipped publicly in the Spectacles Interaction Kit approximately a year after the design phase. Neil Cline engineered the full real-time implementation in Lens Studio. Every moveable panel on Spectacles is a Container. On a system level, two are always present — Lens Explorer and System Settings. Developers can instantiate as many as their experience requires.</p>
+      <p>The visual design has evolved since — the team has refined the aesthetic across Spectacles generations. The interaction design has not changed. That stability is the thing I'm most proud of: a spatial UI primitive that became part of Snap OS and has stayed right.</p>
+      <div class="cs-visual"><span class="placeholder-label">Lens Studio screen recording — Container in use</span></div>
+    </div>
+
+    <div class="back-to-timeline">
+      <a class="back-link" href="index.html" onclick="return goBack(event)"><span class="arrow">←</span> Back</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrapper">
+    <div class="footer-inner">
+      <a href="mailto:kucherdim@gmail.com">Email</a>
+      <span class="footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/dmitry-kucher-b4b960a4/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <a href="dmytro-kucher-cv.pdf" download>Download CV</a>
+      <span class="footer-copy">© 2026</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // On click, try history.back() first (preserves browser-managed scroll).
+  // If no history (direct link / bookmark), navigate to index.html,
+  // and index.html will restore scroll from sessionStorage if available.
+  function goBack(e) {
+    const cameFromOwnSite = document.referrer && document.referrer.includes(window.location.host);
+    if (cameFromOwnSite && history.length > 1) {
+      e.preventDefault();
+      history.back();
+      return false;
+    }
+    return true;
+  }
+</script>
+</body>
+</html>
