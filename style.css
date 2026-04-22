@@ -353,6 +353,7 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
 .cs-visual video {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   object-fit: cover;
   display: block;
 }
