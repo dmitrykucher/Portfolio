@@ -220,14 +220,14 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   margin-bottom: 18px;
 }
 
-.entry-credit {
+.entry-credit, .cs-visual + .entry-credit {
   font-size: 11px;
   color: var(--lighter-gray);
   margin-top: -12px;
   margin-bottom: 16px;
 }
 
-.entry-credit a {
+.entry-credit a, .cs-visual + .entry-credit a {
   color: var(--lighter-gray);
   text-decoration: underline;
   text-underline-offset: 2px;
