@@ -327,7 +327,18 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   margin-bottom: 16px;
 }
 
-.cs-visual {
+.cs-visual-flow {
+  width: 100%;
+  max-width: var(--reading-width);
+  margin: 32px 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cs-visual-flow img {
+  width: 100%;
+  display: block;
+}
   width: 100%;
   max-width: var(--reading-width);
   aspect-ratio: 16/9;
