@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 200" role="img">
+  <title>LiDAR initialization design solution</title>
+  <desc>Two-phase timeline showing hummingbirds filling the LiDAR wait window, then flying to surfaces as plants appear</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="60" width="180" height="80" rx="4" fill="#E8E8E8"/>
+  <text x="110" y="88" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1A1A1A">LiDAR initializing</text>
+  <text x="110" y="108" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="10" font-weight="400" fill="#888888">3–5 sec · no surface data yet</text>
+  <text x="110" y="124" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="10" font-weight="400" fill="#888888">Hummingbirds hover near camera</text>
+
+  <line x1="200" y1="100" x2="248" y2="100" stroke="#BBBBBB" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="250" y="60" width="180" height="80" rx="4" fill="#E8E8E8"/>
+  <text x="340" y="88" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1A1A1A">Birds fly to surfaces</text>
+  <text x="340" y="108" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="10" font-weight="400" fill="#888888">User follows with camera</text>
+  <text x="340" y="124" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="10" font-weight="400" fill="#888888">Environment gets scanned</text>
+
+  <line x1="430" y1="100" x2="458" y2="100" stroke="#BBBBBB" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="460" y="60" width="200" height="80" rx="4" fill="#1A1A1A"/>
+  <text x="560" y="88" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">AR plants appear</text>
+  <text x="560" y="108" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="10" font-weight="400" fill="#BBBBBB">Surface-classified per object type</text>
+  <text x="560" y="124" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="10" font-weight="400" fill="#BBBBBB">No onboarding needed</text>
+
+  <text x="110" y="168" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="500" fill="#BBBBBB" letter-spacing="0.06em">PROBLEM: DEAD WAIT</text>
+  <text x="340" y="168" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="500" fill="#BBBBBB" letter-spacing="0.06em">SOLUTION: DESIGNED WAIT</text>
+  <text x="560" y="168" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="500" fill="#BBBBBB" letter-spacing="0.06em">OUTCOME</text>
+</svg>
