@@ -46,6 +46,13 @@
     </div>
 
     <div class="cs-section">
+      <div class="cs-label">The design rationale</div>
+      <p>The first question was scope: which objects actually need a Container? Not everything in AR space is the same kind of thing. A 3D model sitting in the world is non-interactive — its entire body can serve as a grab handle, with cursor shape and hover highlight doing the signaling work. But 2D interactive content is fundamentally different. A browser, a video player, a system dialog — these have their own internal controls. You can't grab a video by its body to move it in space without accidentally triggering the scrubber. The whole surface is already spoken for.</p>
+      <p>That constraint clarified the design direction. If the content surface can't be the affordance, the frame around it has to be. I introduced a clear separation: the border is for world-space manipulation — move, scale, anchor switching — and the content inside remains fully interactive. This also created something useful: a dedicated system zone for functions like close and anchor switching that would otherwise have nowhere to live.</p>
+      <div class="cs-visual-flow"><img src="container-matrix.svg" alt="AR object types matrix — 2D interactive screens were the primary design focus"></div>
+    </div>
+
+    <div class="cs-section">
       <div class="cs-label">The process</div>
       <p>I started in Figma — not to produce deliverables, but to think visually. Sketching the frame, exploring what the affordances should communicate, working out where system functions would live. Once the concept was solid, I mapped the interactions: cursor states, the frame's visual feedback on hover, the feedback hierarchy between cursor and frame.</p>
       <p>Then I wrote a scenario — a storyboard of interactions I needed the prototype to show. Three Containers in front of a user. Within that setup I choreographed interactions with all of them: hovering over frames, content, scale affordances, and system buttons to visualize feedback on both the cursor side (shape changes to communicate intent) and the frame side (a dynamic highlight showing exactly where the user is targeting).</p>

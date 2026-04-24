@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 340" role="img">
+  <title>AR object types matrix</title>
+  <desc>Four-quadrant matrix showing design focus for the Container</desc>
+  <defs>
+    <clipPath id="outer">
+      <rect x="40" y="36" width="600" height="274" rx="6"/>
+    </clipPath>
+  </defs>
+
+  <rect x="40" y="36" width="600" height="274" rx="6" fill="#F7F7F7"/>
+  <rect x="40" y="183" width="300" height="127" fill="#1A1A1A" clip-path="url(#outer)"/>
+
+  <line x1="40" y1="183" x2="640" y2="183" stroke="#E8E8E8" stroke-width="1"/>
+  <line x1="340" y1="36" x2="340" y2="310" stroke="#E8E8E8" stroke-width="1"/>
+
+  <text x="340" y="22" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#BBBBBB" letter-spacing="0.1em">NON-INTERACTIVE</text>
+  <text x="340" y="328" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#BBBBBB" letter-spacing="0.1em">INTERACTIVE</text>
+  <text x="18" y="180" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#BBBBBB" letter-spacing="0.1em" transform="rotate(-90, 18, 180)">2D</text>
+  <text x="662" y="180" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#BBBBBB" letter-spacing="0.1em" transform="rotate(90, 662, 180)">3D</text>
+
+  <text x="190" y="76" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1A1A1A">2D · non-interactive</text>
+  <text x="190" y="96" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#888888">Images, static text</text>
+  <text x="190" y="114" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#888888">Whole surface = grab handle</text>
+  <text x="190" y="136" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" fill="#BBBBBB">Container works; secondary focus</text>
+
+  <text x="490" y="76" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1A1A1A">3D · non-interactive</text>
+  <text x="490" y="96" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#888888">3D models, animations</text>
+  <text x="490" y="114" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#888888">Object body = grab handle</text>
+  <text x="490" y="136" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" fill="#BBBBBB">Cursor + highlight sufficient</text>
+
+  <text x="190" y="218" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">2D · interactive</text>
+  <text x="190" y="238" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#BBBBBB">Browser · video · app UI · system UI</text>
+  <text x="190" y="256" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#BBBBBB">Dialogs · AR experience UI</text>
+  <text x="190" y="276" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" fill="#888888">Primary design focus</text>
+
+  <text x="490" y="218" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1A1A1A">3D · interactive</text>
+  <text x="490" y="238" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#888888">Nothing at system level</text>
+  <text x="490" y="258" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="9" fill="#BBBBBB">Out of scope for v1</text>
+</svg>
