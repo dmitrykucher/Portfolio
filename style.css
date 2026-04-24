@@ -29,16 +29,10 @@ body {
 
 /* ── NAV ── */
 nav.top-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
   padding: 24px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 nav.top-nav .nav-left {
@@ -108,7 +102,7 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
 
 /* ── HERO (index only) ── */
 .hero {
-  padding-top: 120px;
+  padding-top: 40px;
   padding-bottom: 80px;
 }
 
@@ -196,6 +190,8 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
 
 .entry-visual img,
 .entry-visual video {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -274,7 +270,7 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
 
 /* ── CASE STUDY PAGE ── */
 .case-study-page {
-  padding-top: 120px;
+  padding-top: 40px;
   padding-bottom: 80px;
 }
 
@@ -333,6 +329,19 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   margin-bottom: 16px;
 }
 
+.cs-visual-flow {
+  width: 100%;
+  max-width: var(--reading-width);
+  margin: 32px 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cs-visual-flow img {
+  width: 100%;
+  display: block;
+}
+
 .cs-visual {
   width: 100%;
   max-width: var(--reading-width);
@@ -351,39 +360,6 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-}
-
-.cs-visual-flow {
-  width: 100%;
-  max-width: var(--reading-width);
-  margin: 32px 0;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.cs-visual-flow img {
-  width: 100%;
-  display: block;
-}
-
-.cs-visual-diagram {
-  width: 100%;
-  max-width: var(--reading-width);
-  aspect-ratio: 16/9;
-  background: #F5F5F5;
-  border-radius: 4px;
-  margin: 32px 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cs-visual-diagram img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
   display: block;
 }
 
@@ -515,10 +491,10 @@ footer a:hover { opacity: 0.65; }
   nav.top-nav { padding: 18px 20px; }
   .wrapper, .wrapper-narrow { padding: 0 20px; }
   .role-meta .employer { font-size: 28px; }
-  .hero { padding-top: 90px; }
+  .hero { padding-top: 24px; }
   .hero h1 { font-size: 38px; }
   .hero .lead { font-size: 18px; }
-  .case-study-page { padding-top: 90px; }
+  .case-study-page { padding-top: 24px; }
   .cs-title-block h1 { font-size: 32px; }
   .cs-section p { font-size: 14px; }
   .footer-copy { margin-left: 0; width: 100%; }

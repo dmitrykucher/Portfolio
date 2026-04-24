@@ -8,10 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 
@@ -50,8 +46,7 @@
       </div>
 
       <div class="entry">
-        <div class="entry-visual"><video src="container-animation.mp4" autoplay loop muted playsinline></video></div>
-        <p class="entry-credit">Schematic recreation · Character rig: <a href="https://studio.blender.org/characters/rain/v3/" target="_blank" rel="noopener">Rain</a> by Blender Studio, modified (reposed, animated, lit) · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
+        <div class="entry-visual"><span class="placeholder-label">Container</span></div>
         <div class="entry-title">Container</div>
         <p class="entry-desc">Spectacles had no consistent spatial UI primitive — every moveable panel was solved ad hoc. I designed the Container: a frame that wraps UI elements and makes them moveable in AR space. It became the foundation for all system UI on Spectacles.</p>
         <a class="btn-case-study" href="container.html">View case study <span class="arrow">→</span></a>
@@ -60,7 +55,7 @@
       <div class="entry">
         <div class="entry-visual"><span class="placeholder-label">Spatial Targeting</span></div>
         <div class="entry-title">Spatial Targeting</div>
-        <p class="entry-desc">The original cursor rendered at a fixed depth and jumped abruptly when hitting UI — users couldn't build a mental model for how targeting worked. I redesigned the cursor, introduced a ray, and defined a depth constraint system. Validated with a controlled prototype study: significantly more successful hits.</p>
+        <p class="entry-desc">The original cursor rendered at a fixed depth and jumped abruptly when hitting UI — users couldn't build a mental model for how targeting worked. I redesigned the cursor, introduced a ray, and defined a depth constraint system. Validated with a controlled prototype study: 3x more successful hits.</p>
         <a class="btn-case-study" href="targeting.html">View case study <span class="arrow">→</span></a>
       </div>
 
@@ -72,7 +67,7 @@
       </div>
 
       <div class="entry">
-        <div class="entry-visual" style="background:#F5F5F5;display:flex;align-items:center;justify-content:center;"><img src="mirroring-flow.svg" alt="Screen mirroring user flow" style="width:100%;height:100%;object-fit:contain;"></div>
+        <div class="entry-visual" style="background:#FFFFFF;display:flex;align-items:center;justify-content:center;"><img src="mirroring-flow.svg" alt="Screen mirroring user flow" style="width:100%;height:100%;object-fit:contain;"></div>
         <div class="entry-title">Screen mirroring app</div>
         <p class="entry-desc">Designed the phone-to-glasses casting experience for Spectacles — spring-based soft-follow behavior, world and body anchoring, and a sticky FoV implementation that keeps cast content within the user's view.</p>
       </div>
@@ -88,29 +83,26 @@
       </div>
 
       <div class="entry">
-        <div class="entry-visual"><video src="lidar.mp4" autoplay loop muted playsinline></video></div>
+        <div class="entry-visual"><span class="placeholder-label">Magic Forest — LiDAR</span></div>
         <div class="entry-title">Magic Forest — LiDAR</div>
         <p class="entry-desc">Apple reached out to Snap ahead of the iPhone 12 launch. I led the design of the first LiDAR AR experience on Snapchat, solving a 3–5 second initialization constraint through interaction design. Featured on the Apple keynote — 61 million YouTube views.</p>
         <a class="btn-case-study" href="magic-forest.html">View case study <span class="arrow">→</span></a>
       </div>
 
       <div class="entry">
-        <div class="entry-visual"><video src="Spectacles2021.mp4" autoplay loop muted playsinline></video></div>
-        <p class="entry-credit">Video: <a href="https://www.youtube.com/watch?v=UfIlA6zC-WY&list=PLdfCGl7CQeT-drzWTxc3ieiML65ss8rp3" target="_blank" rel="noopener">Snap Partner Summit 2021</a> · © Snap Inc.</p>
+        <div class="entry-visual"><span class="placeholder-label">Spectacles 2021</span></div>
         <div class="entry-title">Spectacles 2021 launch</div>
         <p class="entry-desc">Led design and production of the full slate of AR experiences for the Spectacles 2021 launch — coordinating prototyping, 3D, VFX, and engineering. Shipped every committed experience on schedule.</p>
       </div>
 
       <div class="entry">
-        <div class="entry-visual"><video src="Spectacles3.mp4" autoplay loop muted playsinline></video></div>
-        <p class="entry-credit">Video: Courtesy of Snap Inc.</p>
+        <div class="entry-visual"><span class="placeholder-label">Spectacles 3</span></div>
         <div class="entry-title">Spectacles 3 — depth &amp; IMU experiences</div>
         <p class="entry-desc">Designed AR experiences built on a depth map, stereo camera, and IMU pipeline — enabling surface-aware occlusion, motion-reactive characters, and a fully realized underwater world with caustics and procedural coral.</p>
       </div>
 
       <div class="entry">
-        <div class="entry-visual"><video src="SnapchatFaceLensesVideo.mp4" autoplay loop muted playsinline></video></div>
-        <p class="entry-credit">Lenses: <a href="https://www.snapchat.com/lens/be972436a59747d3b4c5998f6a5438cb?type=SNAPCODE&metadata=01&mt=8" target="_blank" rel="noopener">1</a> · <a href="https://www.snapchat.com/lens/8e8ec1a9899842dc802b79e0346b1a87?type=SNAPCODE&metadata=01" target="_blank" rel="noopener">2</a> · <a href="https://www.snapchat.com/lens/62557f0eab924a7599a6fe6b2d5b8308?type=SNAPCODE&metadata=01" target="_blank" rel="noopener">3</a> · © Snap Inc.</p>
+        <div class="entry-visual"><span class="placeholder-label">Face AR pipeline</span></div>
         <div class="entry-title">Snapchat 1st party face AR pipeline</div>
         <p class="entry-desc">Ran the end-to-end production pipeline for Snapchat's 1st party face AR experiences — from stats-driven concept selection through 3D/VFX review, engineering handoff, QA, and ship.</p>
       </div>
@@ -155,7 +147,8 @@
       <a href="mailto:kucherdim@gmail.com">Email</a>
       <span class="footer-sep">·</span>
       <a href="https://www.linkedin.com/in/dmitry-kucher-b4b960a4/" target="_blank" rel="noopener">LinkedIn</a>
-
+      <span class="footer-sep">·</span>
+      <a href="dmytro-kucher-cv.pdf" download>Download CV</a>
       <span class="footer-copy">© 2026</span>
     </div>
   </div>
@@ -163,33 +156,41 @@
 
 
 <script>
+  // ── Scroll position preservation ──
+  // Save scroll position whenever the user clicks a "View case study" link.
+  // On load, restore if we have one saved AND we arrived here via back navigation.
+  
   const SCROLL_KEY = 'dk_timeline_scroll';
 
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-
-  // Save scroll before navigating away
+  // Save scroll before navigating away to a case study
   document.querySelectorAll('.btn-case-study').forEach(link => {
     link.addEventListener('click', () => {
-      try { sessionStorage.setItem(SCROLL_KEY, String(window.scrollY)); } catch (err) {}
+      try {
+        sessionStorage.setItem(SCROLL_KEY, String(window.scrollY));
+      } catch (err) {
+        // sessionStorage not available — fall through
+      }
     });
   });
 
-  // pageshow fires on both normal load AND BFCache restore (mobile Safari back navigation)
-  window.addEventListener('pageshow', function(e) {
+  // On load, restore scroll position if we have one saved
+  window.addEventListener('load', () => {
     try {
       const saved = sessionStorage.getItem(SCROLL_KEY);
       if (saved !== null) {
+        // Use instant scroll to avoid visible jump
+        window.scrollTo({ top: parseInt(saved, 10), behavior: 'instant' });
         sessionStorage.removeItem(SCROLL_KEY);
-        const top = parseInt(saved, 10);
-        // Immediate + delayed attempts to beat any browser scroll reset
-        window.scrollTo(0, top);
-        requestAnimationFrame(() => window.scrollTo(0, top));
-        setTimeout(() => window.scrollTo(0, top), 100);
       }
-    } catch (err) {}
+    } catch (err) {
+      // sessionStorage not available — ignore
+    }
   });
+
+  // Tell browser we manage scroll restoration ourselves
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
 </script>
 </body>
 </html>
