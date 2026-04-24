@@ -47,8 +47,9 @@
 
     <div class="cs-section">
       <div class="cs-label">The design rationale</div>
-      <p>The first question was scope: which objects actually need a Container? Not everything in AR space is the same kind of thing. A 3D model sitting in the world is non-interactive — its entire body can serve as a grab handle, with cursor shape and hover highlight doing the signaling work. But 2D interactive content is fundamentally different. A browser, a video player, a system dialog — these have their own internal controls. You can't grab a video by its body to move it in space without accidentally triggering the scrubber. The whole surface is already spoken for.</p>
-      <p>That constraint clarified the design direction. If the content surface can't be the affordance, the frame around it has to be. I introduced a clear separation: the border is for world-space manipulation — move, scale, anchor switching — and the content inside remains fully interactive. This also created something useful: a dedicated system zone for functions like close and anchor switching that would otherwise have nowhere to live.</p>
+      <p>The first question was scope: which objects actually need a move affordance? Not everything in AR space behaves the same way. A 3D model sitting in the world is non-interactive — its entire body can serve as a grab handle, with cursor shape and hover highlight doing the signaling work. But 2D interactive content is fundamentally different. A browser, a video player, a system dialog — these have their own internal controls. The whole surface is already spoken for.</p>
+      <p>That left the question of where the move affordance could live. Mixing world-space manipulation with content interaction on the same surface would require the input system to reliably distinguish intent — and hand tracking at the time wasn't there yet. Separating the two was both a usability decision and a pragmatic one.</p>
+      <p>That also opened a question: if the affordance had its own dedicated zone, what else could live there?</p>
       <div class="cs-visual-flow"><img src="container-matrix.svg" alt="AR object types matrix — 2D interactive screens were the primary design focus"></div>
     </div>
 
