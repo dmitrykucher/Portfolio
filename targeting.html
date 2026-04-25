@@ -8,10 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 
@@ -36,7 +32,7 @@
 
     <div class="cs-section">
       <div class="cs-label">The problem</div>
-      <p>In the initial cursor implementation on Spectacles, hand-based targeting used a small 2D cursor rendered at a fixed depth — approximately 110cm from the user. When the user's ray intersected a UI panel at a different distance, the cursor jumped abruptly to that depth. The jump was jarring, but more importantly it was confusing: users had no visual model for how raycasting worked. There was no ray — just a floating cursor that snapped unpredictably. Every depth jump felt like a malfunction. Users couldn't build a reliable mental model for how to target, or whether they were doing it right.</p>
+      <p>In the initial cursor implementation on Spectacles, hand-based targeting used a small 2D cursor rendered at a fixed depth. When the user's ray intersected a UI panel at a different distance, the cursor jumped abruptly to that depth. The jump was jarring, but more importantly it was confusing: users had no visual model for how raycasting worked. There was no ray — just a floating cursor that snapped unpredictably. Every depth jump felt like a malfunction. Users couldn't build a reliable mental model for how to target, or whether they were doing it right.</p>
       <p>UX research confirmed what was observable in sessions: targeting was breaking core interactions across Spectacles.</p>
       <div class="cs-visual"><span class="placeholder-label">Original cursor behavior — fixed depth, abrupt jumps</span></div>
     </div>
@@ -50,13 +46,11 @@
       <div class="cs-label">The solutions</div>
 
       <h3>The cursor</h3>
-      <p>The new cursor only appears when the user is near something interactable — fading in smoothly at the depth of that object. When not targeting anything, it disappears entirely.</p>
-      <p>To make this work, every interactive object needed a second physics collider — approximately 2x the size of the object — used exclusively to trigger cursor visibility as the user's hand approached. This was a foundational change to the Spectacles Interaction Kit: a new requirement that all interactable objects carry this proximity collider.</p>
+      <p>The new cursor only appears when the user is near something interactable — fading in smoothly as their hand enters the object's interaction zone. When not targeting anything, it disappears entirely. This required a foundational change to the Spectacles Interaction Kit: all interactable objects now define an interaction zone that drives cursor visibility.</p>
       <div class="cs-visual"><span class="placeholder-label">New cursor — proximity-aware fade-in</span></div>
 
       <h3>The ray</h3>
       <p>A visible ray gives users something the cursor never could: a clear line of sight that explains how the system works. Users can see where the ray originates, where it points, and what it lands on. The ray length adjusts dynamically based on what's being targeted. Different objects can express different targeting visuals — a cursor for UI panels, a ray for objects in 3D space — letting the system communicate context without adding UI.</p>
-      <p>In the balloon prototype, users transitioned naturally between cursor and ray within the same scene. In testing, they didn't notice the switch. That invisibility was the signal that the design was working.</p>
       <div class="cs-visual"><span class="placeholder-label">Ray behavior — dynamic length at varying depths</span></div>
 
       <h3>Depth constraint</h3>
@@ -66,7 +60,7 @@
     <div class="cs-section">
       <div class="cs-label">Validation</div>
       <p>I built two functional prototypes — one with the original cursor behavior, one with the new system — and wrapped both in the same balloon-popping task to create a controlled comparison. The prototypes went through corridor studies with the UX research team.</p>
-      <p>The new targeting system produced significantly more successful hits than the original.</p>
+      <p>The new targeting system produced 3x more successful hits than the original.</p>
       <p>Beyond the numbers: participants stopped thinking about targeting. They focused on the task. I presented the findings and the prototype comparison directly to Evan Spiegel and received his sign-off to proceed.</p>
     </div>
 
@@ -88,7 +82,8 @@
       <a href="mailto:kucherdim@gmail.com">Email</a>
       <span class="footer-sep">·</span>
       <a href="https://www.linkedin.com/in/dmitry-kucher-b4b960a4/" target="_blank" rel="noopener">LinkedIn</a>
-
+      <span class="footer-sep">·</span>
+      <a href="dmytro-kucher-cv.pdf" download>Download CV</a>
       <span class="footer-copy">© 2026</span>
     </div>
   </div>
