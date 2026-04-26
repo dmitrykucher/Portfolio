@@ -38,7 +38,8 @@
       <div class="cs-label">The problem</div>
       <p>In the initial cursor implementation on Spectacles, hand-based targeting used a small 2D cursor rendered at a fixed depth. When the user's ray intersected a UI panel at a different distance, the cursor jumped abruptly to that depth. The jump was jarring, but more importantly it was confusing: users had no visual model for how raycasting worked. There was no ray — just a floating cursor that snapped unpredictably. Every depth jump felt like a malfunction. Users couldn't build a reliable mental model for how to target, or whether they were doing it right.</p>
       <p>UX research confirmed what was observable in sessions: targeting was breaking core interactions across Spectacles.</p>
-      <div class="cs-visual"><span class="placeholder-label">Original cursor behavior — fixed depth, abrupt jumps</span></div>
+      <div class="cs-visual"><video src="targeting-cursor-old.mp4" autoplay loop muted playsinline></video></div>
+      <p class="entry-credit">Original cursor behavior · Schematic recreation · Character rig: <a href="https://studio.blender.org/characters/rain/v3/" target="_blank" rel="noopener">Rain</a> by Blender Studio, modified (reposed, animated, lit) · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
     </div>
 
     <div class="cs-section">
@@ -51,11 +52,13 @@
 
       <h3>The cursor</h3>
       <p>The new cursor only appears when the user is near something interactable — fading in smoothly as their hand enters the object's interaction zone. When not targeting anything, it disappears entirely. This required a foundational change to the Spectacles Interaction Kit: all interactable objects now define an interaction zone that drives cursor visibility.</p>
-      <div class="cs-visual"><span class="placeholder-label">New cursor — proximity-aware fade-in</span></div>
+      <div class="cs-visual"><video src="targeting-cursor-new.mp4" autoplay loop muted playsinline></video></div>
+      <p class="entry-credit">New cursor — proximity-aware fade-in · Schematic recreation · Character rig: <a href="https://studio.blender.org/characters/rain/v3/" target="_blank" rel="noopener">Rain</a> by Blender Studio, modified (reposed, animated, lit) · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
 
       <h3>The ray</h3>
       <p>A visible ray gives users something the cursor never could: a clear line of sight that explains how the system works. Users can see where the ray originates, where it points, and what it lands on. The ray length adjusts dynamically based on what's being targeted. Different objects can express different targeting visuals — a cursor for UI panels, a ray for objects in 3D space — letting the system communicate context without adding UI.</p>
-      <div class="cs-visual"><span class="placeholder-label">Ray behavior — dynamic length at varying depths</span></div>
+      <div class="cs-visual"><video src="targeting-ray.mp4" autoplay loop muted playsinline></video></div>
+      <p class="entry-credit">Ray behavior · Schematic recreation · Character rig: <a href="https://studio.blender.org/characters/rain/v3/" target="_blank" rel="noopener">Rain</a> by Blender Studio, modified (reposed, animated, lit) · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
 
       <h3>Depth constraint</h3>
       <p>UI panels needed a way to lock cursor depth to their surface — preventing the ray from overshooting past the panel into the scene behind it. The design concept I introduced for this became the Interaction Plane in the shipped Interaction Kit: an invisible depth surface built into interactable objects that constrains cursor behavior to the UI plane, keeping targeting precise and predictable regardless of what exists in 3D space behind the panel.</p>
