@@ -186,6 +186,8 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   overflow: hidden;
   margin-bottom: 20px;
   position: relative;
+  transform: translateZ(0);
+  isolation: isolate;
 }
 
 .entry-visual img,
@@ -196,6 +198,7 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: translateZ(0);
 }
 
 .entry-visual .placeholder-label {
@@ -351,6 +354,8 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   margin: 32px 0;
   overflow: hidden;
   position: relative;
+  transform: translateZ(0);
+  isolation: isolate;
 }
 
 .cs-visual img,
@@ -361,6 +366,7 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: translateZ(0);
 }
 
 .cs-visual .placeholder-label {
