@@ -51,6 +51,10 @@
       <p>That left the question of where the move affordance could live. Mixing world-space manipulation with content interaction on the same surface would require the input system to reliably distinguish intent — and hand tracking at the time wasn't there yet. Separating the two was both a usability decision and a pragmatic one.</p>
       <p>That also opened a question: if the affordance had its own dedicated zone, what else could live there?</p>
       <div class="cs-visual-flow"><img src="container-matrix.svg" alt="AR object types matrix — 2D interactive screens were the primary design focus"></div>
+      <p>Starting from this map, a pattern emerged. 3D non-interactive objects — models, props, anything without internal controls — already afford movement naturally. The real-world analogy is direct: any object of reasonable size and weight can be grabbed and moved. In AR, the same logic applies — grab the body, communicate the state change through cursor shape or a subtle highlight. No wrapper needed.</p>
+      <p>2D non-interactive content works similarly. An image, a static display — the whole surface is available as a grab handle.</p>
+      <p>But 2D interactive content breaks this model entirely. A web page, a UI panel, an app interface — the surface is spoken for. Every part of it is doing something. Grabbing the body means competing with the content's own controls.</p>
+      <p>The solution kept the same fundamental metaphor — grab the object and move it — but relocated the grab surface. Instead of the body, the frame around it. A border wide enough to target reliably, visually distinct from the content inside, and familiar enough from desktop windowing that the learning curve was minimal. Users already knew what a window frame was for.</p>
     </div>
 
     <div class="cs-section">
