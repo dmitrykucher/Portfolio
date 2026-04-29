@@ -173,6 +173,14 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   color: var(--light-gray);
 }
 
+.role-meta .role-employment-note {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--lighter-gray);
+  margin-top: 6px;
+  font-style: italic;
+}
+
 /* ── ENTRY (timeline) ── */
 .entry { margin-bottom: 64px; }
 .entry:last-child { margin-bottom: 0; }
