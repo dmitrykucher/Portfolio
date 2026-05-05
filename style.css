@@ -340,6 +340,19 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   margin-bottom: 16px;
 }
 
+.cs-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.cs-section ul li {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--gray);
+  margin-bottom: 6px;
+}
+
 .cs-visual-flow {
   width: 100%;
   max-width: var(--reading-width);

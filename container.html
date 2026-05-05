@@ -36,58 +36,55 @@
 
     <div class="cs-section">
       <div class="cs-label">The problem</div>
-      <p>When I joined the Spectacles product design team, there was an existing approach to moveable UI that had several compounding problems. Targeting it was difficult and fatiguing — the interaction surface was too small for the precision hand tracking demanded at the time, and users struggled to reliably grab and move things in space. It also offered no room for system-level functions — closing, scaling, switching between world and body anchoring would all have to live somewhere else, solved separately. The experience felt fragile rather than intentional.</p>
+      <p>When I joined the Spectacles product design team, the existing approach to moveable UI had several compounding problems. Targeting was fatiguing — the interaction surface was too small for the precision hand tracking demanded. Users struggled to reliably grab and move things in space. And there was no room for system-level functions — close, scale, anchor switching would all have to live somewhere else, solved separately. The experience felt fragile rather than intentional.</p>
       <p>There was no spatial UI primitive. There was no pattern. Everything was being solved ad hoc.</p>
     </div>
 
     <div class="cs-section">
       <div class="cs-label">The brief I set for myself</div>
-      <p>Design a spatial container that makes AR panels feel like first-class objects in space — easy to grab, easy to move, and extensible enough to carry the system functions that flat UI in AR would need over time.</p>
+      <p>Design a spatial UI primitive that makes AR panels feel like first-class objects in space — easy to grab, easy to move, and extensible enough to carry the system functions that flat UI in AR would need over time.</p>
     </div>
 
     <div class="cs-section">
       <div class="cs-label">The design rationale</div>
-      <p>The first question was scope: which objects actually need a move affordance? Not everything in AR space behaves the same way. A 3D model sitting in the world is non-interactive — its entire body can serve as a grab handle, with cursor shape and hover highlight doing the signaling work. But 2D interactive content is fundamentally different. A browser, a video player, a system dialog — these have their own internal controls. The whole surface is already spoken for.</p>
-      <p>That left the question of where the move affordance could live. Mixing world-space manipulation with content interaction on the same surface would require the input system to reliably distinguish intent — and hand tracking at the time wasn't there yet. Separating the two was both a usability decision and a pragmatic one.</p>
-      <p>That also opened a question: if the affordance had its own dedicated zone, what else could live there?</p>
+      <p>Before jumping to a solution, I needed to map the problem space. Which objects in AR actually need a move affordance?</p>
+      <p>Not everything behaves the same way. 3D non-interactive objects — models, props — already afford movement naturally. The real-world analogy is direct: any object of reasonable size and weight can just be grabbed and moved. In AR, the same logic applies. Grab the body, communicate the state change through cursor shape or a subtle highlight. No wrapper needed.</p>
+      <p>2D non-interactive content works the same way. An image, a static display — the whole surface is available as a grab handle.</p>
+      <p>But 2D interactive content breaks this model. A web page, a UI panel, a system dialog — the whole surface is occupied by controls. Grabbing the body means competing with the content's own interactions.</p>
       <div class="cs-visual-flow"><img src="container-matrix.svg" alt="AR object types matrix — 2D interactive screens were the primary design focus"></div>
-      <p>Starting from this map, a pattern emerged. 3D non-interactive objects — models, props, anything without internal controls — already afford movement naturally. The real-world analogy is direct: any object of reasonable size and weight can be grabbed and moved. In AR, the same logic applies — grab the body, communicate the state change through cursor shape or a subtle highlight. No wrapper needed.</p>
-      <p>2D non-interactive content works similarly. An image, a static display — the whole surface is available as a grab handle.</p>
-      <p>But 2D interactive content breaks this model entirely. A web page, a UI panel, an app interface — the surface is spoken for. Every part of it is doing something. Grabbing the body means competing with the content's own controls.</p>
-      <p>The solution kept the same fundamental metaphor — grab the object and move it — but relocated the grab surface. Instead of the body, the frame around it. A border wide enough to target reliably, visually distinct from the content inside, and familiar enough from desktop windowing that the learning curve was minimal. Users already knew what a window frame was for.</p>
+      <p>So the question became: how do I keep the same fundamental gesture — grab the object and move it — but relocate the grab surface so it doesn't conflict with the content inside? Mixing world-space manipulation with content interaction on the same surface would require the input system to reliably distinguish intent — and hand tracking at the time wasn't there yet. Separating the two was both a usability decision and a pragmatic one.</p>
+      <p>The answer was the frame. Use the border around the content as the affordance zone. Wide enough to target reliably. Visually distinct from the inside. And familiar — users already understood window frames from desktop. The learning curve was minimal because the concept wasn't new, just applied to a new context.</p>
+      <p>That also opened a question: if the affordance had its own dedicated zone, what else could live there?</p>
     </div>
 
     <div class="cs-section">
       <div class="cs-label">The process</div>
-      <p>I started in Figma — not to produce deliverables, but to think visually. Sketching the frame, exploring what the affordances should communicate, working out where system functions would live. Once the concept was solid, I mapped the interactions: cursor states, the frame's visual feedback on hover, the feedback hierarchy between cursor and frame.</p>
-      <p>Then I wrote a scenario — a storyboard of interactions I needed the prototype to show. Three Containers in front of a user. Within that setup I choreographed interactions with all of them: hovering over frames, content, scale affordances, and system buttons to visualize feedback on both the cursor side (shape changes to communicate intent) and the frame side (a dynamic highlight showing exactly where the user is targeting).</p>
-      <p>I recorded myself acting all of this out, framed deliberately so I knew where the Containers would sit in the final composite. I tracked the footage and brought it into Blender and After Effects. Built the UI assets in 3D, animated the full interaction model, and comped everything together.</p>
-      <p>This was before agentic tools existed. Without coding skills, animation was the fastest way to validate a highly interactive spatial design — no Figma prototype could communicate what the interaction felt like in 3D space.</p>
-      <p>I presented the prototype to Evan Spiegel. He greenlit it for further development and real-time prototyping in Lens Studio.</p>
+      <p>My process started in Figma — not to produce deliverables, but to think visually. Sketching the frame, exploring what the affordances should communicate, working out where system functions would live.</p>
+      <p>Then I wrote a scenario — a storyboard of interactions I needed my prototype to show: hovering, grabbing, scaling, triggering system buttons. Since this was before agentic tools existed, and I didn't have coding skills at the time, animation was my fastest path to validation. I recorded myself acting all of this out, tracked the footage, brought it into Blender and After Effects, built the UI assets in 3D, animated the full interaction model, and comped everything together.</p>
+      <p>I presented the prototype along with the rationale directly to Evan Spiegel and received sign-off to proceed to real-time prototyping in Lens Studio.</p>
       <div class="cs-visual-flow"><img src="process-timeline.svg" alt="Process timeline: Figma → Video → Tracking → Blender → After Effects"></div>
     </div>
 
     <div class="cs-section">
       <div class="cs-label">The design</div>
-      <p>The Container is a frame that wraps around content and makes it a first-class moveable object in AR space. It works in close coordination with the system cursor — the frame and the cursor communicate together to make the user's intent legible at every moment.</p>
-      <p>When the cursor enters the frame, it changes shape to a move icon, signaling that grabbing here will move the Container in space. Targeting any corner reveals scale handles for resizing. System functions — close and anchor mode switching — occupy dedicated areas on the frame, always accessible without interfering with the content inside. When the cursor moves past the frame into the content area, it transitions to a standard interactive cursor, signaling that now you're operating the content, not the Container. The two zones are visually and behaviorally distinct — you always know which mode you're in.</p>
+      <p>The Container is a frame that wraps around content and makes it a moveable object in AR space. It works in close coordination with the system cursor — the frame and cursor communicate together to make the user's intent legible at every moment.</p>
+      <p>When the cursor enters the frame, it changes to a move icon — grab here, move the Container. Target any corner and scale handles appear for resizing. System functions — close and anchor switching — occupy dedicated areas on the frame, always accessible without interfering with the content inside. Move the cursor past the frame into the content area, and it transitions to a standard interactive cursor. Two zones, visually and behaviorally distinct — you always know which mode you're in.</p>
       <h3>Affordance size</h3>
       <p>The frame margins were deliberately generous — large enough to make targeting forgiving, tuned to balance grabbability against visual footprint. As hand tracking improved over time, the defaults were refined accordingly.</p>
       <h3>System function space</h3>
-      <p>The frame wasn't just a grab handle — it created real estate for the functions that spatial UI needed: close, world-to-body anchor switching, scaling. These could live on the frame itself, contextually, without cluttering the content inside.</p>
+      <p>The frame created real estate for the functions that spatial UI needed: close, world-to-body anchor switching, and scale. These live on the frame itself, contextually, without cluttering the content inside.</p>
       <h3>Configurability</h3>
-      <p>Border size can be adjusted dynamically — tied to distance from the camera, so panels feel more grabbable as they move further away. Developers can toggle scaling, movement, and billboarding on or off. By default, when a user moves a Container it billboards on the Y axis — the content reorients to face the user as it's placed, keeping it legible wherever it lands. System controls — close, anchor switch — can be disabled. Frame visibility can be always on, or reveal itself on hover.</p>
-      <p>The Container is a system, not a fixed component.</p>
+      <p>The Container is a configurable system, not a fixed component. Border size can be adjusted dynamically — tied to distance from the camera, so panels feel more grabbable as they move further away. Developers can toggle scaling, movement, and billboarding on or off. By default, when a user moves a Container it billboards on the Y axis, keeping content legible wherever it lands. System controls — close and anchor switch — can each be disabled. Frame visibility can be always on, or reveal itself on hover.</p>
       <div class="cs-visual"><video src="container-animation.mp4" autoplay loop muted playsinline></video></div>
       <p class="entry-credit">Schematic recreation · Character rig: <a href="https://studio.blender.org/characters/rain/v3/" target="_blank" rel="noopener">Rain</a> by Blender Studio, modified (reposed, animated, lit) · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
     </div>
 
     <div class="cs-section">
       <div class="cs-label">Outcome</div>
-      <p>The Container was built internally first, refined through iterative testing, and shipped publicly in the Spectacles Interaction Kit approximately a year after the design phase. Neil Cline engineered the full real-time implementation in Lens Studio. Every moveable panel on Spectacles is a Container. On a system level, two are always present — Lens Explorer and System Settings. Developers can instantiate as many as their experience requires.</p>
-      <p>The visual design has evolved since — the team has refined the aesthetic as Snap OS has grown. The interaction design has not changed. That stability is the thing I'm most proud of: a spatial UI primitive that became part of Snap OS and has stayed right.</p>
+      <p>The Container was built internally first, refined through iterative testing, and shipped publicly in the Spectacles Interaction Kit. Neil Cline engineered the full real-time implementation. Every moveable panel on Spectacles is a Container. On a system level, two are always present — Lens Explorer and System Settings. Developers can instantiate multiple Containers within a single experience.</p>
+      <p>The visual design has evolved as Snap OS has grown. The interaction design has not changed. That stability is the thing I'm most proud of — a spatial UI primitive that became part of Snap OS and has stayed right.</p>
       <div class="cs-visual" style="background:#000000;"><video src="Container-3.mp4" autoplay loop muted playsinline></video></div>
-        <p class="entry-credit">Lens Studio screen recording · © Snap Inc.</p>
+      <p class="entry-credit">Lens Studio screen recording · © Snap Inc.</p>
     </div>
 
     <div class="back-to-timeline">
