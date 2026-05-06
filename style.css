@@ -141,6 +141,13 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
 
 /* ── TIMELINE ── */
 .timeline-section { padding-bottom: 80px; }
+.snap-attribution {
+  font-size: 12px;
+  color: var(--lighter-gray);
+  font-style: italic;
+  margin-bottom: 64px;
+  text-align: center;
+}
 .role-block { margin-bottom: 200px; position: relative; }
 .role-block:last-child { margin-bottom: 0; }
 
@@ -189,7 +196,7 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
 }
 
 /* ── ENTRY (timeline) ── */
-.entry { margin-bottom: 64px; }
+.entry { margin-bottom: 96px; }
 .entry:last-child { margin-bottom: 0; }
 
 .entry-visual {
@@ -224,10 +231,10 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
 }
 
 .entry-title {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--black);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
 
