@@ -231,30 +231,37 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 8px;
+  width: 100%;
+  max-width: var(--reading-width);
+  box-sizing: border-box;
 }
 
 .entry-title-row .entry-title {
   margin-bottom: 0;
+  flex: 1;
 }
 
 .device-badge {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 4px;
   flex-shrink: 0;
 }
 
 .device-badge img {
   display: block;
-  height: 33px;
+  max-height: 33px;
+  max-width: 140px;
   width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .device-badge-label {
   font-size: 11px;
   color: var(--lighter-gray);
-  text-align: right;
+  text-align: center;
   white-space: nowrap;
 }
 
