@@ -142,6 +142,7 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
 /* ── TIMELINE ── */
 .timeline-section { padding-bottom: 80px; }
 .role-block { margin-bottom: 200px; position: relative; }
+.role-block:last-child { margin-bottom: 0; }
 
 .role-meta {
   border-top: 1px solid #E0E0E0;
