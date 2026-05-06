@@ -225,6 +225,39 @@ nav.top-nav .nav-left a:hover { opacity: 0.65; }
   margin-bottom: 8px;
 }
 
+.entry-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.entry-title-row .entry-title {
+  margin-bottom: 0;
+}
+
+.device-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.device-badge img {
+  display: block;
+  height: 33px;
+  width: auto;
+}
+
+.device-badge-label {
+  font-size: 11px;
+  color: var(--lighter-gray);
+  text-align: right;
+  white-space: nowrap;
+}
+
 .entry-desc {
   font-size: 15px;
   line-height: 1.65;
