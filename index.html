@@ -38,17 +38,37 @@
 <section class="hero">
   <div class="wrapper">
     <h1>Dmytro Kucher</h1>
-    <p class="subtitle">Product Designer — XR &amp; Spatial Interfaces</p>
+    <p class="subtitle">Product Designer — Spatial Computing &amp; AI</p>
 
-    <p class="lead">For nine years I designed the interaction layer of Spectacles — the spatial UI primitives, input models, and platform frameworks that shipped across three generations of AR hardware. Much of it turned on-device computer vision and machine learning — depth, meshing, body tracking, colocation — into spatial interactions people could use. 8 US patents. One experience on an Apple keynote seen by 61 million people.</p>
+    <p class="lead">For nine years I designed the interaction layer of Spectacles — the spatial UI primitives, input models, and platform frameworks that shipped across multiple generations of AR hardware. Much of it turned on-device computer vision and machine learning into usable interfaces, most recently the AI-driven first-party Specs apps I designed, prototyped with Cursor and Lens Studio over MCP. 8 US patents. One experience on an Apple keynote seen by 61 million people.</p>
   </div>
 </section>
 
 <section class="timeline-section">
   <div class="wrapper">
 
-    <!-- SNAP ATTRIBUTION -->
-    <p class="snap-attribution">All work created during employment at Snap Inc. (2017–2026)</p>
+    <!-- SPECS -->
+    <div class="role-block">
+      <div class="role-meta">
+        <!-- PLACEHOLDER IMAGE: replace specs.png with the Specs glasses image (same 120px height as the other generations) -->
+        <div class="employer"><img src="specs.png" alt="Specs" style="height:120px;width:auto;display:block;margin-bottom:10px;">Specs</div>
+      </div>
+
+            <div class="entry">
+        <div class="entry-title">Navigation</div>
+        <p class="entry-desc">Walking navigation for Specs, with the map rendered in world space. I settled on a ~45° tilt after testing the range — laid flat it fights Specs' ray-cast targeting, stood upright it tires the hand. Search is multimodal — hand input or voice; speaking shows a live waveform, then an AI returns a summary with the results. The map stays world-locked while you browse, then becomes a head-locked minimap the moment you start walking, so guidance follows you without holding your attention. I validated these decisions in-headset by generating interactive prototypes with Cursor wired into Lens Studio over MCP. Owned end to end; early preview at AWE 2026.</p>
+        <!-- PLACEHOLDER VIDEO: replace specs-navigation.mp4 (reuses .entry-visual, so it inherits the same aspect ratio as the live videos) -->
+        <div class="entry-visual"><video src="specs-navigation.mp4" autoplay loop muted playsinline></video></div>
+        <p class="entry-credit">Video: <a href="https://youtu.be/bsqQG4iiK2Y?t=1193" target="_blank" rel="noopener">AWE 2026 keynote</a> · © Snap Inc.</p>
+      </div>
+            <div class="entry">
+        <div class="entry-title">Measure</div>
+        <p class="entry-desc">Spatial measurement for distances and volumes, designed around furniture fitting. I committed to manual marker placement after auto-detection proved not precise enough to trust for real fitting decisions — reliability over automation. Results read as numbers anchored in world space above each line. The same Cursor-into-Lens-Studio MCP loop let me test how placing markers by hand actually felt and cut what didn't work. Owned end to end; early preview at AWE 2026.</p>
+        <!-- PLACEHOLDER VIDEO: replace specs-measure.mp4 (reuses .entry-visual, so it inherits the same aspect ratio as the live videos) -->
+        <div class="entry-visual"><video src="specs-measure.mp4" autoplay loop muted playsinline></video></div>
+        <p class="entry-credit">Video: <a href="https://youtu.be/bsqQG4iiK2Y?t=1204" target="_blank" rel="noopener">AWE 2026 keynote</a> · © Snap Inc.</p>
+      </div>
+    </div>
 
     <!-- SPECTACLES 2024 -->
     <div class="role-block">
