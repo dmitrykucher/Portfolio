@@ -1,48 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 400" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 720 405" role="img">
   <title>Screen mirroring user flow</title>
-  <desc>Two swim lanes Phone and Spectacles showing casting flow with No loop and Yes crossing to Spectacles</desc>
+  <desc>Two lanes, Phone and Spectacles. On the phone, the user opens the Spectacles app and selects the mirroring extension, then is asked to join the Spectacles Wi-Fi and accept the broadcast permission. No returns to the app. Yes moves to Spectacles: the phone screen is cast and shown in AR, then the user can reposition, resize, anchor or stop it.</desc>
+  <style>@font-face{font-family:'GeistDiagram';font-weight:400;src:url(data:font/woff2;base64,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) format('woff2');}@font-face{font-family:'GeistDiagram';font-weight:500;src:url(data:font/woff2;base64,d09GMgABAAAAAAMAAA4AAAAABRwAAAKtAAHmZgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgRYcKgZgAFQRCAqDEIJiATYCJAMYCw4ABCAFRAcgG+kDKC4HbGMkXk+N9i3LIocU8/kdZ6jvZoNI8P9k93Xu6xqYkbOZJZ0K6QaJEAPq/4NoAdYf4973xQRoAD7huNK2lJeYd7uuuGZwyOkB5FsAGFFQBiou9gPQZDGnnIC3pXGBRhbZ9+rguzzVD+U8QL2YFHluigU7FmivaAXreW2SVmu0KABe1TNZ0Lj0mckQR0+nREAyAGAIEYMQkEgTXXC9+th8wJk57tSAM7eTrwJnUbrXAA4OwHsEaOHsTgPwgADhMOIR8Rj1OKCFDgIc+O8tvw/+vUNv27e+ZAsgWmEolkSA+aZGa6nHXKoOZplcgLPh+iIGbIcFYKAboylsqCuUC0GNGXFpg1uG0A0+/w9cN2EBAVi2XQfKSQQMCIBsAgRk4+gGkEw8hmMIYfI06XoP0WX+rI+XpweSofKetEWxACQDccA6gJOQOBCgEIahxIT8uPTkxqSYpPkxJJe4wJGCCUnhiaSQpXdEIhKNJh2GkByGST8oG/38dELKSySxpylr27IYszMqYGwLOx8z9vpR6dyRI++TJ5eFl4y6eZyEu/k5w/DS8eEx17f37XFZu9vTo30Hvrg+03G2Y9O/UZM0ZJluclef72jW1NlM9YujeZi7QNkH2M9Wn14cSxswCX/0SUX36Xu5s28ygDxp0HLd8dTvP562dbb6H9aozpwOBc0Z3aUlEwxZ0sBMWrUyh3EsQlcPdmtxSmnsDZWdGqg/WjLVYyVzfG3Vaa9h5DWHW0yR9NUEV3KkPqa19t0AAAL0fM7VhgXUZNrRNwheAjw7PGckALxoGH7l33+1bEAsBoDgM2J7tQO/lNs+s1gbh8omGWMe/9tEY4MGFKToWdiIAc4ZpQTIJSDyIWBGKj6oL3nKdOkhYjB5cpTpU8dDniJ9aqTpgAIAf4gWCAAA) format('woff2');}@font-face{font-family:'GeistDiagram';font-weight:600;src:url(data:font/woff2;base64,d09GMgABAAAAAAOsAA4AAAAABrAAAANbAAHmZgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbghIcKgZgAGQRCAqEeIQFATYCJAMsCxgABCAFSAcgGzAFYJ4DbltMnbo8l5CZeJEIrj8LRRDN8e/sJY+SfCDiIkhgX5b1ZQ2sWZgquh/2Z29ncYC+JqeDFToUitAupNvAOQcMI0ygbPBIiqpH/wN8Ih48lUMtFqsFrVAR/6Fr5wu8PcAKD6i17dMFfEQjHQ3ABy5zrobPI6hRqJeDRn9SgQaQhFAJgcpUi5UrVw/RIeGE3YBDwhmDAoOEixKTBhKUkP8CceGUQQN+CIRS0i6pDBcaJUJ3IRRCa74lV3nhvg3tWslTnvJBjqKD7Fqzn1wJk0dY8gtAvsmZO8/khg8TVZFDpk4BBLmzZOrzNOSUpFSgFaFNaNnSipexUkhKAlCONlYaiRIyBiiuVmNlOpTYvEkvkABsIMvEYRWxVBHD1969vXMInixDL9z//0K5NHwQkHqnrzBUhYQCPRUCPZW2Al11VWCZTt36DCGjZxYygvbe/AmDTiUR8QXgQuS/LpQaO3qjEz4mWqBXMlrVoSb5wvZiYNO0Vl2bumNye32kFlTMhn4gkHts7ufHeNz7qX7R2bXz56d6wfbYD/WL3p5dX191SyeNBylG6tSpqMuqaJJQSks6d/ar82UT5wePBcXdeVLzvbyWTi+6VVWlol5yFQh37/n+NkScL/yYD3btPEtGH/2w6od2g3VLFV1UZY/85W9089/pd/ejMc+nJsCNLpKX2LQLk4Fytb5fPrP5TO+70z7Nql2jA1xk3mpDZ9ijTGbg4LM+PR86Wrb1q79rB6/JOvKtXK+ysbET8sYub9KEYti7KCa6M61XzMq3J7W2eagL8hqHfGE0kq+IhaACXIGLQZ0Em3I4sBmJCJ+BhU8Ff2bkQwtWFFuwuVbh2osdPfX1dT11HfNwoAv70eY+jXf/k77tK7f1D7R2lRQn7q7L7AtjRSIVpUMNLc1CfRWZYWnqQHy7nvA+t6G3s66tMj/5clWi+3BPbVMppbq9Q2ipgF93/ayfpv9lAAjEH6eP746miEKb/m7vUvwFv793mgbAn+O2TUGdp/R1+hGtEgj+YzP9sw1r6FizbqvTXnnpSz3S9yakM8jp1dY0gJz+bQVpgtePHQCz0lqBArXJ7TtqXzJYIcoOYSDioyWdDbSGAsLIJM0OCgREBy2cHJWCihlOwsATyFDTAQ==) format('woff2');}@font-face{font-family:'GeistDiagram';font-weight:700;src:url(data:font/woff2;base64,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) format('woff2');}
+    text{font-family:'GeistDiagram','Geist',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif}</style>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
   </defs>
-
-  <rect x="0" y="0" width="680" height="200" fill="#FFFFFF"/>
-  <rect x="0" y="200" width="680" height="200" fill="#FFFFFF"/>
-  <line x1="0" y1="200" x2="680" y2="200" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="6 5"/>
-
-  <text x="28" y="100" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#AAAAAA" letter-spacing="0.12em" transform="rotate(-90, 28, 100)">PHONE</text>
-  <text x="28" y="300" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#AAAAAA" letter-spacing="0.12em" transform="rotate(-90, 28, 300)">SPECTACLES</text>
-
-  <rect x="60" y="60" width="148" height="80" rx="6" fill="#EBEBEB"/>
-  <text x="134" y="93" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Spectacles app</text>
-  <text x="134" y="115" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="11" fill="#888888">Select mirroring extension</text>
-
-  <line x1="208" y1="100" x2="232" y2="100" stroke="#BBBBBB" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <rect x="234" y="60" width="180" height="80" rx="6" fill="#EBEBEB"/>
-  <text x="324" y="90" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Join Spectacles Wi-Fi?</text>
-  <text x="324" y="110" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="11" fill="#888888">Accept broadcast permission</text>
-  <text x="324" y="126" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="11" fill="#888888">on phone</text>
-
-  <line x1="324" y1="140" x2="324" y2="172" stroke="#BBBBBB" stroke-width="1.5"/>
-  <line x1="324" y1="172" x2="134" y2="172" stroke="#BBBBBB" stroke-width="1.5"/>
-  <line x1="134" y1="172" x2="134" y2="140" stroke="#BBBBBB" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="229" y="188" text-anchor="middle" font-family="'Geist', -apple-system, sans-serif" font-size="11" fill="#AAAAAA">No</text>
-
-  <text x="440" y="90" text-anchor="start" font-family="'Geist', -apple-system, sans-serif" font-size="11" fill="#AAAAAA">Yes</text>
-  <line x1="414" y1="100" x2="480" y2="100" stroke="#BBBBBB" stroke-width="1.5"/>
-  <line x1="480" y1="100" x2="480" y2="236" stroke="#BBBBBB" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <rect x="440" y="238" width="116" height="80" rx="6" fill="#EBEBEB"/>
-  <text x="498" y="268" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Cast Screen</text>
-  <text x="498" y="288" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="11" fill="#888888">Phone visible</text>
-  <text x="498" y="304" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="11" fill="#888888">in AR lens</text>
-
-  <line x1="556" y1="278" x2="570" y2="278" stroke="#BBBBBB" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <rect x="572" y="238" width="96" height="80" rx="6" fill="#1A1A1A"/>
-  <text x="620" y="262" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Control</text>
-  <text x="620" y="282" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#BBBBBB">Reposition · Resize</text>
-  <text x="620" y="298" text-anchor="middle" dominant-baseline="central" font-family="'Geist', -apple-system, sans-serif" font-size="10" fill="#BBBBBB">Anchor · Stop</text>
+  <rect width="720" height="405" fill="#FFFFFF"/>
+  <line x1="64" y1="200" x2="688" y2="200" stroke="#BDBDBD" stroke-width="1" stroke-dasharray="6 5"/>
+  <text x="34" y="100" text-anchor="middle" font-weight="600" font-size="10" fill="#6E6E6E" letter-spacing="1.2" transform="rotate(-90 34 100)">PHONE</text>
+  <text x="34" y="302" text-anchor="middle" font-weight="600" font-size="10" fill="#6E6E6E" letter-spacing="1.2" transform="rotate(-90 34 302)">SPECTACLES</text>
+  <rect x="76" y="46" width="196" height="88" rx="8" fill="#EDEDED"/>
+  <text x="174.0" y="83.9" text-anchor="middle" font-weight="700" font-size="14" fill="#111111">Spectacles app</text>
+  <text x="174.0" y="105.9" text-anchor="middle" font-weight="400" font-size="12" fill="#474747">Select mirroring extension</text>
+  <rect x="304" y="46" width="224" height="88" rx="8" fill="#EDEDED"/>
+  <text x="416.0" y="75.4" text-anchor="middle" font-weight="700" font-size="14" fill="#111111">Join Spectacles Wi-Fi?</text>
+  <text x="416.0" y="97.4" text-anchor="middle" font-weight="400" font-size="12" fill="#474747">Accept broadcast permission</text>
+  <text x="416.0" y="114.4" text-anchor="middle" font-weight="400" font-size="12" fill="#474747">on phone</text>
+  <rect x="364" y="262" width="160" height="88" rx="8" fill="#EDEDED"/>
+  <text x="444.0" y="291.4" text-anchor="middle" font-weight="700" font-size="14" fill="#111111">Cast screen</text>
+  <text x="444.0" y="313.4" text-anchor="middle" font-weight="400" font-size="12" fill="#474747">Phone screen</text>
+  <text x="444.0" y="330.4" text-anchor="middle" font-weight="400" font-size="12" fill="#474747">shown in AR</text>
+  <rect x="548" y="262" width="140" height="88" rx="8" fill="#111111"/>
+  <text x="618.0" y="291.4" text-anchor="middle" font-weight="700" font-size="14" fill="#FFFFFF">Control</text>
+  <text x="618.0" y="313.4" text-anchor="middle" font-weight="400" font-size="12" fill="#D6D6D6">Reposition · Resize</text>
+  <text x="618.0" y="330.4" text-anchor="middle" font-weight="400" font-size="12" fill="#D6D6D6">Anchor · Stop</text>
+  <path d="M272 90.0 H301" fill="none" stroke="#8A8A8A" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <path d="M348 134 V164 H174.0 V137" fill="none" stroke="#8A8A8A" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <text x="261.0" y="182" text-anchor="middle" font-weight="500" font-size="12" fill="#4A4A4A">No</text>
+  <path d="M444.0 134 V259" fill="none" stroke="#8A8A8A" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <text x="454.0" y="171.0" text-anchor="start" font-weight="500" font-size="12" fill="#4A4A4A">Yes</text>
+  <path d="M524 306.0 H545" fill="none" stroke="#8A8A8A" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
 </svg>
